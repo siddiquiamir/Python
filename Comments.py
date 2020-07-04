@@ -51,3 +51,5 @@ Keep writing'''
     return a
 
 print(my_func())
+
+account_id = 1001
