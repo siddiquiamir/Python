@@ -103,3 +103,51 @@ print(my_func([1,2,3],3))
 
 # Lambda function
 print(lambda x : x**2)
+
+# While Loop
+i= 5
+while True:
+    print(i)
+    if i >= 5:
+        break
+
+i= 0
+while i <=5:
+    print(i)
+    i+=1
+
+# name = input("Please enter your name: ")
+# while not True:
+#     if type(name)== str:
+#         print(name)
+#     else:
+#         if type(name)== int:
+#             input("Please enter a valid name")
+#             break
+
+
+# # While Not
+# min_length = 2
+# name = input("Please enter your name")
+# while not (len(name) > min_length and name.isalpha() and name.isprintable()):
+#     name= input("Please enter your name")
+# print("Hello", name)
+
+# Same code
+min_length= 2
+while True:
+    name= input("Please enter your name: ")
+    if len(name) > min_length and name.isprintable() and name.isalpha():
+        break
+
+print("Your name is", name)
+
+# Continue statement
+
+i=0
+while i < 10:
+    i+=1
+    if i % 2 ==0:
+        continue
+    print(i)
+
