@@ -100,3 +100,6 @@ print(my_func(2,3))
 print(my_func("you",3))
 
 print(my_func([1,2,3],3))
+
+# Lambda function
+print(lambda x : x**2)
