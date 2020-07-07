@@ -134,13 +134,13 @@ while i <=5:
 # print("Hello", name)
 
 # Same code
-min_length= 2
-while True:
-    name= input("Please enter your name: ")
-    if len(name) > min_length and name.isprintable() and name.isalpha():
-        break
-
-print("Your name is", name)
+# min_length= 2
+# while True:
+#     name= input("Please enter your name: ")
+#     if len(name) > min_length and name.isprintable() and name.isalpha():
+#         break
+#
+# print("Your name is", name)
 
 # Continue statement
 
@@ -151,3 +151,126 @@ while i < 10:
         continue
     print(i)
 
+# While with else
+l=[10,20,30]
+print(l)
+val= 100
+idx= 0
+
+while idx < len(l):
+    if l[idx]== val:
+        break
+    idx += 1
+else:
+    l.append(val)
+print(l)
+
+# Try and Except
+a=10
+b= 0
+
+# Try and Except
+try:
+    a/b
+except ZeroDivisionError:
+    print("Division By Zero")
+
+# Finally
+try:
+    a/b
+except ZeroDivisionError:
+    print("Division By Zero")
+finally:
+    print("Finally always run")
+
+print("====================")
+# Try continue
+a=0
+b= 2
+while a < 4:
+    print("-------------------")
+    a+= 1
+    b-= 1
+    try:
+        a/b
+    except ZeroDivisionError:
+        print("{0} {1} Division by 0".format(a,b))
+        continue
+    finally:
+        print("{0} {1} Always executes".format(a, b))
+
+    print("{0} {1} main loop".format(a,b))
+
+# Try Break
+a=0
+b= 2
+while a < 4:
+    print("-------------------")
+    a+= 1
+    b-= 1
+    try:
+        a/b
+    except ZeroDivisionError:
+        print("{0} {1} Division by 0".format(a,b))
+        break
+    finally:
+        print("{0} {1} Always executes".format(a, b))
+
+    print("{0} {1} main loop".format(a,b))
+
+# Try Break (Code will exhaust and stop)
+a=0
+b= 10
+while a < 4:
+    print("-------------------")
+    a+= 1
+    b-= 1
+    try:
+        a/b
+    except ZeroDivisionError:
+        print("{0} {1} Division by 0".format(a,b))
+        break
+    finally:
+        print("{0} {1} Always executes".format(a, b))
+
+    print("{0} {1} main loop".format(a,b))
+
+# For Loop (This will print tuple)
+for i in [(1,2), (3,4), (5,6)]:
+    print(i)
+
+# Unpack tuple
+for i,j in [(1,2), (3,4), (5,6)]:
+    print(i,j)
+
+# Continue
+for i in range(5):
+    if i ==4:
+        continue
+    print(i)
+
+# Break
+for i in range(5):
+    if i ==4:
+        break
+    print(i)
+
+# Try
+for i in range(5):
+    print("====================")
+    try:
+        10/(i-3)
+    except ZeroDivisionError:
+        print("Divided by zero")
+        continue
+    print("Main body")
+
+# Print Index
+s= "hello"
+for i in range(len(s)):
+    print(i)
+
+# Print Index and elements
+s= "hello"
+for i in range(len(s)):
+    print(i, s[i])
